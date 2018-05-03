@@ -9,7 +9,8 @@ Kalman::Kalman() {
     Q_bias = 0.003f;  
     R_measure = 0.03f;    
     angle = 0.0f;  
-    bias = 0.0f;    
+    bias = 0.0f;
+    angle_dot = 0.0f;
     P[0][0] = 0.0f;  
     P[0][1] = 0.0f;  
     P[1][0] = 0.0f;  
@@ -29,14 +30,15 @@ float Kalman::getAngle(float newAngle, float newRate, float dt) {
     K[1] = P[1][0] / S;  
     float y = newAngle - angle;  
     angle += K[0] * y;  
-    bias += K[1] * y;  
+    bias += K[1] * y;
+    angle_dot = newRate - bias; // 最优角速度
     float P00_temp = P[0][0];  
     float P01_temp = P[0][1];  
     P[0][0] -= K[0] * P00_temp;  
     P[0][1] -= K[0] * P01_temp;  
     P[1][0] -= K[1] * P00_temp;  
     P[1][1] -= K[1] * P01_temp;    
-    return angle;  
+    return angle;  //最优角度
 };  
   
   
@@ -48,7 +50,7 @@ void Kalman::setQangle(float Q_angle) { this->Q_angle = Q_angle; };
 void Kalman::setQbias(float Q_bias) { this->Q_bias = Q_bias; };  
 void Kalman::setRmeasure(float R_measure) { this->R_measure = R_measure; };  
   
-  
+float Kalman::angleDot() { return this->angle_dot; };
 float Kalman::getQangle() { return this->Q_angle; };  
 float Kalman::getQbias() { return this->Q_bias; };  
 float Kalman::getRmeasure() { return this->R_measure; };  

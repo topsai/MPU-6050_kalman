@@ -7,37 +7,30 @@
   
 class Kalman {  
 public:  
-    Kalman();  
-  
-  
-    float getAngle(float newAngle, float newRate, float dt);  
-  
-  
+    Kalman();
+    float getAngle(float newAngle, float newRate, float dt);  // 获取最优角度
+
     void setAngle(float angle);  
-    float getRate();  
-  
+    float getRate();
   
     void setQangle(float Q_angle);  
     void setQbias(float Q_bias);  
     void setRmeasure(float R_measure);  
-  
-  
+
     float getQangle();  
     float getQbias();  
-    float getRmeasure();  
+    float getRmeasure();
+    float Kalman::angleDot();  // 获取最优角速度
   
   
 private:  
     float Q_angle;  
     float Q_bias;  
-    float R_measure;  
-  
-  
+    float R_measure;
     float angle;  
-    float bias;  
-    float rate;  
-  
-  
+    float bias;
+    float angle_dot;
+    float rate;
     float P[2][2];  
 };  
   
