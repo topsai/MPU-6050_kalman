@@ -12,8 +12,7 @@
 //  mgx = gx/130; // 角速度
 
 
-
-Kalman angle_feng;
+Kalman kalman;
 MPU6050 accelgyro;
 
 int16_t ax, ay, az,gx, gy, gz; // 陀螺仪6个参数
@@ -37,7 +36,7 @@ void loop()
   ax_angle = atan2(ax, az) * 180 / PI; // x角度
   gy +=  GX_ZERO;
   gyro = gy / 131.0;
-  Angle = angle_feng.getAngle(ax_angle, gyro, dt);
+  Angle = kalman.getAngle(ax_angle, gyro, dt);
   delay(10); // 采样时间
   Serial.print(ax_angle); Serial.print(", ");
   Serial.println(Angle);
