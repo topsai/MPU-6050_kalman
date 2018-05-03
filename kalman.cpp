@@ -50,7 +50,7 @@ void Kalman::setQangle(float Q_angle) { this->Q_angle = Q_angle; };
 void Kalman::setQbias(float Q_bias) { this->Q_bias = Q_bias; };  
 void Kalman::setRmeasure(float R_measure) { this->R_measure = R_measure; };  
   
-float Kalman::angleDot() { return this->angle_dot; };
+float Kalman::getAngleDot() { return this->angle_dot; };
 float Kalman::getQangle() { return this->Q_angle; };  
 float Kalman::getQbias() { return this->Q_bias; };  
 float Kalman::getRmeasure() { return this->R_measure; };  

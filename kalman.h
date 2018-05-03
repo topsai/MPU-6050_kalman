@@ -20,7 +20,7 @@ public:
     float getQangle();  
     float getQbias();  
     float getRmeasure();
-    float Kalman::angleDot();  // 获取最优角速度
+    float getAngleDot();  // 获取最优角速度
   
   
 private:  
