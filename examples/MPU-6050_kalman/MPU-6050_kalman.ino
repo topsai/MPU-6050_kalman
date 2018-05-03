@@ -1,7 +1,7 @@
 #include "Wire.h"
 #include "I2Cdev.h"
 #include "MPU6050.h"
-#include <Kalman.h>
+#include <kalman.h>
 
 #define AX_ZERO -630 //加速度计的0偏修正值  
 #define GX_ZERO 290 //陀螺仪的0偏修正  
