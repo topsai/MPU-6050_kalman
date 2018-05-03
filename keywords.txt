@@ -1,10 +1,10 @@
-#ÏÂÃæÊÇkeywords.txt µÄÄÚÈÝ£¬ÆäÖÐ#¿ªÍ·µÄÊÇ×¢ÊÍ£¬ÍêÈ«¿ÉÒÔ²»Ð´¡£¸ñÊ½£ºword¡¾tab¡¿DESCRIPTION word¾ÍÊÇÄãÒª¸ßÁÁµÄ¹Ø¼ü×Ö½Ó×Å1 ¸ö tab ¼ü £¬È»ºó¾ÍÊÇDESCRIPTION¡£
-#DESCRIPTION¿ÉÒÔÈ¡µÄÖµ£º
-#KEYWORD1    ¸ßÁÁÀàÃû
-#KEYWORD2    ¸ßÁÁ·½·¨Ãû
-#LITERAL1       ¸ßÁÁ³£Á¿
-#×¢ÒâÖÐ¼äÊ¹ÓÃµÄÊÇ 1  ¸ö  tab ¼ü ¸ô¿ªµÄ
+#ä¸‹é¢æ˜¯keywords.txt çš„å†…å®¹ï¼Œå…¶ä¸­#å¼€å¤´çš„æ˜¯æ³¨é‡Šï¼Œå®Œå…¨å¯ä»¥ä¸å†™ã€‚æ ¼å¼ï¼šwordã€tabã€‘DESCRIPTION wordå°±æ˜¯ä½ è¦é«˜äº®çš„å…³é”®å­—æŽ¥ç€1 ä¸ª tab é”® ï¼Œç„¶åŽå°±æ˜¯DESCRIPTIONã€‚
+#DESCRIPTIONå¯ä»¥å–çš„å€¼ï¼š
+#KEYWORD1    é«˜äº®ç±»å
+#KEYWORD2    é«˜äº®æ–¹æ³•å
+#LITERAL1       é«˜äº®å¸¸é‡
+#æ³¨æ„ä¸­é—´ä½¿ç”¨çš„æ˜¯ 1  ä¸ª  tab é”® éš”å¼€çš„
 
-Kalman	KEYWORD1
+kalman	KEYWORD1
 
 getAngle	KEYWORD2

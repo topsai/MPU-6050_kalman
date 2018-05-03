@@ -30,7 +30,6 @@ void setup() {
 }
 void loop()
 {
-
   accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
   ax += AX_ZERO;
   ax_angle = atan2(ax, az) * 180 / PI; // x角度
